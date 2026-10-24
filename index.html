@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rock Paper Scissors</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game">
+    <header>
+      <h1>Rock Paper Scissors</h1>
+      <p>Pick your move and beat the computer. You can also press R, P or S.</p>
+    </header>
+
+    <section class="scoreboard" aria-label="Score">
+      <div class="score"><span class="label">You</span><span class="value" id="score-player">0</span></div>
+      <div class="score draws"><span class="label">Draws</span><span class="value" id="score-draws">0</span></div>
+      <div class="score"><span class="label">Computer</span><span class="value" id="score-computer">0</span></div>
+    </section>
+
+    <section class="arena" aria-label="Latest round">
+      <div class="hand">
+        <span class="icon" id="player-icon" aria-hidden="true">❔</span>
+        <span class="who">You</span>
+      </div>
+      <span class="vs" aria-hidden="true">VS</span>
+      <div class="hand">
+        <span class="icon" id="computer-icon" aria-hidden="true">❔</span>
+        <span class="who">Computer</span>
+      </div>
+    </section>
+
+    <p class="result" id="result" role="status" aria-live="polite">Choose rock, paper or scissors to start.</p>
+
+    <section class="choices" aria-label="Your choices">
+      <button type="button" class="choice" data-choice="rock" aria-label="Rock (R)">
+        <span class="icon" aria-hidden="true">✊</span><span>Rock</span>
+      </button>
+      <button type="button" class="choice" data-choice="paper" aria-label="Paper (P)">
+        <span class="icon" aria-hidden="true">✋</span><span>Paper</span>
+      </button>
+      <button type="button" class="choice" data-choice="scissors" aria-label="Scissors (S)">
+        <span class="icon" aria-hidden="true">✌️</span><span>Scissors</span>
+      </button>
+    </section>
+
+    <button type="button" class="reset" id="reset">Reset score</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
